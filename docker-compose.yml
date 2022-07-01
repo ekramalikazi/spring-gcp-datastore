@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  mydatastore:
+    image: google/cloud-sdk:latest
+    command: gcloud beta emulators datastore start --project=emulator --host-port 0.0.0.0:8000 --no-store-on-disk --consistency=1
+    ports:
+      - 8000:8000
